@@ -9,7 +9,29 @@
 	
 	</body>
 <script>
-document.getElementsByTagName('html')[0]
+//document.getElementsByTagName('html')[0]
 .innerHTML = "Hello World";
 </script>
+<script>
+                // Getting the HTML
+                async function FetchHtml() 
+                {
+                    let response = await fetch('https://address.com');
+                    return await response.text(); // Returns it as Promise
+                }
+        
+        
+                // Usaing the HTML
+                async function Do()
+                {
+                   let html = await FetchHtml().then(text => {return text}); // Get html from the promise
+                    alert(html);
+                }
+        
+        
+                // Exe
+                Do();
+</script>
+
+
 	</html>
