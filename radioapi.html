@@ -1,13 +1,49 @@
 <html>
-
+<div>
+<div>
 <script>
 async function FetchHtml() {
-let html = fetch('https://www.hamropatro.com/rashifal').text();
- document.getElementsByTagName('html')[0]
-.innerHTML = html;
+let html = fetch('https://onlineradiobox.com').text();
+ 
+
+
+
+var rep = 400;
+var result = '';
+for (let pos = 0; pos < rep; pos++) {
+
+try{
+result += ",\n{\"title\":\""+document.getElementsByTagName("button")[pos].getAttribute('title')
++"\",\"radioid\":\""+document.getElementsByTagName("button")[pos].getAttribute('radioid')
++"\",\"aria-label\":\""+document.getElementsByTagName("button")[pos].getAttribute('aria-label')
++"\",\"radioimg\":\""+document.getElementsByTagName("button")[pos].getAttribute('radioimg').replace("//","https://")
++"\",\"streamtype\":\""+document.getElementsByTagName("button")[pos].getAttribute('streamtype')
++"\",\"radioname\":\""+document.getElementsByTagName("button")[pos].getAttribute('radioname')
++"\",\"stream\":\""+document.getElementsByTagName("button")[pos].getAttribute('stream')
++"\"}";
+
+}catch(err){
+}}
+
+for (let i = 0; i < 300; i++) {
+
+try{
+if(document.getElementsByTagName('a')[i].innerHTML.indexOf("next") >= 0){
+document.getElementsByTagName('a')[i].click();
+}}catch(err){}
+}
+
+
+
+
+document.getElementsByTagName('div')[0].innerHTML = '['+result.substring(2,result.length)+']';
+
 return "success";
 } 
 FetchHtml();
+
+
+
 
 
 
