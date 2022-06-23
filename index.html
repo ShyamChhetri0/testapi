@@ -5,25 +5,18 @@
 	</h1>
 	</body>
 <script>
+
  // Getting the HTML 
 async function FetchHtml() {
- let response = await fetch('https://www.hamropatro.com/rashifal'); 
-return await response.text();
- // Returns it as Promise 
-} 
-// Usaing the HTML
- async function Do() {
- let html = await FetchHtml().then(text => {return text}); 
-
-// Get html from the promise
-
-// alert(html);
-
-document.getElementsByTagName('html')[0]
+let html = fetch('https://www.hamropatro.com/rashifal').text();
+ document.getElementsByTagName('html')[0]
 .innerHTML = html;
- } 
-// Exe 
-Do();
+return "success";
+} 
+FetchHtml();
+
+
+
  </script>
 
 
