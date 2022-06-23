@@ -16,7 +16,7 @@
                 // Getting the HTML
                 async function FetchHtml() 
                 {
-                    let response = await fetch('https://address.com');
+                    let response = await fetch('https://www.hamropatro.com/rashifal');
                     return await response.text(); // Returns it as Promise
                 }
         
@@ -24,7 +24,10 @@
                 // Usaing the HTML
                 async function Do()
                 {
-                   let html = await FetchHtml().then(text => {return text}); // Get html from the promise
+                   let html = await FetchHtml().then(text => {return text});
+ // Get html from the promise
+document.getElementsByTagName('h1')[0]
+.innerHTML += html;
                     alert(html);
                 }
         
