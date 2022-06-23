@@ -1,0 +1,16 @@
+<html>
+
+<script>
+async function FetchHtml() {
+let html = fetch('https://www.hamropatro.com/rashifal').text();
+ document.getElementsByTagName('html')[0]
+.innerHTML = html;
+return "success";
+} 
+FetchHtml();
+
+
+
+ </script>
+
+</html>
