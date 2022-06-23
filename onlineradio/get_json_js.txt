@@ -2,6 +2,8 @@
 
 
 
+
+
 var rep = 400;
 var result = '';
 for (let pos = 0; pos < rep; pos++) {
@@ -14,7 +16,7 @@ result += ",\n{\"title\":\""+document.getElementsByTagName("button")[pos].getAtt
 +"\",\"streamtype\":\""+document.getElementsByTagName("button")[pos].getAttribute('streamtype')
 +"\",\"radioname\":\""+document.getElementsByTagName("button")[pos].getAttribute('radioname')
 +"\",\"stream\":\""+document.getElementsByTagName("button")[pos].getAttribute('stream')
-+"\"}";
++"\"}\n";
 
 }catch(err){
 }}
