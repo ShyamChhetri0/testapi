@@ -1,39 +1,21 @@
 <!DOCTYPE html>
 <html>
 <body>
-	
-	
 <h1>https://shyamchhetri0.github.io/testapi/test
 	</h1>
-	
-	
 	</body>
-<script>
-//document.getElementsByTagName('html')[0]
-.innerHTML = "Hello World";
-</script>
 <script>
                 // Getting the HTML
                 async function FetchHtml() 
                 {
-                    let response = await fetch('https://www.hamropatro.com/rashifal');
-                    return await response.text(); // Returns it as Promise
+            let response = await fetch('https://www.hamropatro.com/rashifal');
+                    return await response.text();
+ // Returns it as Promise
                 }
         
-        
-                // Usaing the HTML
-                async function Do()
-                {
-                   let html = await FetchHtml().then(text => {return text});
- // Get html from the promise
-document.getElementsByTagName('h1')[0]
-.innerHTML += html;
-                    alert(html);
-                }
-        
-        
-                // Exe
-                Do();
+        document.getElementsByTagName('h1')[0]
+.outerHTML = FetchHtml();
+               
 </script>
 
 
